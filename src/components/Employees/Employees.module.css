@@ -1,0 +1,20 @@
+.usersNameBlock {
+  flex: 0 1 50%;
+}
+.alphabetBlock {
+  flex: 0 1 100%;
+}
+.userBlock {
+  display: flex;
+  flex-direction: column;
+  color: blue;
+  align-items: flex-start;
+}
+.radioButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.radioButtons div {
+  text-align: left;
+}
