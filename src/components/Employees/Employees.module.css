@@ -1,20 +1,51 @@
-.usersNameBlock {
-  flex: 0 1 50%;
+.usersBlockByLetter {
+  min-width: 230px;
 }
-.alphabetBlock {
-  flex: 0 1 100%;
+h3 {
+  margin: 5px 0px;
+  color: black;
+}
+h3.activeUser {
+  color: blue;
 }
 .userBlock {
+  padding: 5px 0px;
+}
+.employeesBlockData {
   display: flex;
-  flex-direction: column;
-  color: blue;
-  align-items: flex-start;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 30px;
+  margin-right: 15px;
+  border-right: 1px solid rgb(255, 99, 0);
+}
+
+.employeesBlock {
+  max-width: 60%;
+}
+h1 {
+  height: 70px;
+  text-align: center;
+  color: rgb(255, 99, 0);
+}
+h2 {
+  margin: 0px 0px 7px 0px;
+  color: rgb(255, 99, 0);
 }
 .radioButtons {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .radioButtons div {
   text-align: left;
+  padding: 0px 0px 7px 0px;
 }
+.radioButtons input[type="radio"] {
+  margin: 0px 5px 0px 0px;
+}
+/* input[type="radio"],
+label {
+  display: inline;
+  vertical-align: top;
+} */

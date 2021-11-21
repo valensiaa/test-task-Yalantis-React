@@ -1,28 +1,60 @@
-const SET_ACTIVE_USER = 'SET_ACTIVE_USER'
+const SET_ACTIVE_USER = "SET_ACTIVE_USER";
+const SET_USERS = "SET_USERS";
+const SORT_USERS = "SORT_USERS";
 
 let initialState = {
-   users: [
-      {id: 1, firstName: 'Valya', lastName: 'Levchenko', dob: "2019-07-13T07:19:20.718Z", radioActive: false},
-      {id: 2, firstName: 'Ualya', lastName: 'Levchenko', dob: "2019-07-13T07:19:20.718Z", radioActive: false},
-      {id: 3, firstName: 'Balya', lastName: 'Levchenko', dob: "2019-07-13T07:19:20.718Z", radioActive: true},
-      {id: 4, firstName: 'Walya', lastName: 'Levchenko', dob: "2019-07-13T07:19:20.718Z", radioActive: true},
-      {id: 5, firstName: 'Yalya', lastName: 'Levchenko', dob: "2019-07-13T07:19:20.718Z", radioActive: false}
-      ]
-}
+  users: [],
+  sortedUsersByAlphabet: []
+};
 
 const employeesReducer = (state = initialState, action) => {
-switch (action.type) {
-   case SET_ACTIVE_USER: { 
+  switch (action.type) {
+    case SET_ACTIVE_USER: {
       return {
-      ...state,
-      radioActive: action.boolean
-      }
-   }
-   default:
-       return state
-}
-}
+        ...state,
+        users: state.users.map(u => {
+                    if(u.id === action.userId) {
+                        return {...u, radioValue: action.value}
+                    }
+                    return u
+                })
+      };
+    }
+    case SET_USERS: {     
+      return {
+        ...state,
+        users: action.users 
+      };
+    }
+    case SORT_USERS: {
+      const alpha = Array.from(Array(26)).map((e, i) => i + 65);
+      const alphabet = alpha.map((x) => String.fromCharCode(x));
+      alphabet.forEach((i) => {
+        let letter = i;
+        let obj = {};
+        obj[letter] = [];
+        state.users.forEach((element) => {
+          element.radioValue = 'false'
+          if (letter === element.firstName[0]) {
+            obj[letter].push(element)
+          }
+        });
+        if (obj[letter].length === 0) obj[letter] = "No employees"
+        state.sortedUsersByAlphabet.push(obj)
+      });
+      return {
+        ...state,
+        sortedUsersByAlphabet: [...state.sortedUsersByAlphabet],
+      };
+    }
+    default:
+      return state;
+  }
+};
 
-export const setRadioActiveAC = (value) => ({type: SET_ACTIVE_USER, boolean: value})
+export const setRadioActiveAC = (value, userId) => ({type: SET_ACTIVE_USER, value, userId});
+export const setUsersAC = (users) => ({ type: SET_USERS, users });
+export const sortUsersAC = (users) => ({ type: SORT_USERS, users });
 
-export default employeesReducer
+
+export default employeesReducer;

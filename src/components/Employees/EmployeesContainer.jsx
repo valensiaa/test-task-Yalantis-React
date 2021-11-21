@@ -1,18 +1,24 @@
 import { connect } from 'react-redux';
 import Employees from './Employees'
-import {setRadioActiveAC} from '../../redux/employees-reducer'
+import {setRadioActiveAC, setUsersAC, sortUsersAC} from '../../redux/employees-reducer'
 
-let mapStateToProps = (state) => {
-   console.log(state)
+let mapStateToProps = (state) => {   
    return {
-      users: state.employeesPage.users
+      users: state.employeesPage.users,
+      sortedUsersByAlphabet: state.employeesPage.sortedUsersByAlphabet
    }
 }
 
 let mapDispatchToProps = (dispatch) => {
    return {
-      setActiveUsers:(value) => {
-         dispatch(setRadioActiveAC(value))
+      setUsers: (users) => {
+      dispatch(setUsersAC(users))
+    },
+      setActiveUser:(value, id) => {
+         dispatch(setRadioActiveAC(value, id))
+      },
+      sortUsers:() => {
+         dispatch(sortUsersAC())
       }
    }
 }
