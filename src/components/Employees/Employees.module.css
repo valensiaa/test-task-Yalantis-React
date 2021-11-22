@@ -3,7 +3,6 @@
 }
 h3 {
   margin: 5px 0px;
-  color: black;
 }
 h3.activeUser {
   color: blue;
@@ -11,20 +10,23 @@ h3.activeUser {
 .userBlock {
   padding: 5px 0px;
 }
-body::-webkit-scrollbar, .employeesBlockData::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+body::-webkit-scrollbar,
+.employeesBlockData::-webkit-scrollbar {
+  width: 12px;
 }
 
-.employeesBlockData::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
-  background: rgb(255, 255, 255);        /* color of the tracking area */
+.employeesBlockData::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
 }
 
-.employeesBlockData::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 99, 0);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
+.employeesBlockData::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 99, 0);
+  border-radius: 20px;
 }
 .employeesBlockData {
-  max-height: 80vh;
+  max-height: 70vh;
   display: flex;
   overflow: auto;
   white-space: nowrap;
@@ -57,8 +59,3 @@ h2 {
 .radioButtons input[type="radio"] {
   margin: 0px 5px 0px 0px;
 }
-/* input[type="radio"],
-label {
-  display: inline;
-  vertical-align: top;
-} */

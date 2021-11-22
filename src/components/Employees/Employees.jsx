@@ -32,16 +32,14 @@ const Employees = (props) => {
       <div className={styles.employeesBlockData}>
         {props.sortedUsersByAlphabet.map((p) =>
           Object.entries(p).map((elem) => (
-            <div className={styles.usersBlockByLetter} key={p.id}>
+            <div className={styles.usersBlockByLetter} key={elem.id}>
               <h2 key={elem.id}>{elem[0]}</h2>
               {typeof elem[1] === "string" ? (
                 <h3>{elem[1]}</h3>
               ) : (
                 elem[1].map((u) => (
                   <div key={u.id} className={styles.userBlock}>
-                    <h3
-                      className={u.radioValue === "true" ? styles.activeUser : ""}
-                    >
+                    <h3 key={u.id} className={u.radioValue === "true" ? styles.activeUser : ""}>
                       {u.firstName} {u.lastName}
                     </h3>
                     <div className={styles.radioButtons}>
