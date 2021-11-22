@@ -2,9 +2,10 @@ const SET_ACTIVE_USER = "SET_ACTIVE_USER";
 const SET_USERS = "SET_USERS";
 const SORT_USERS = "SORT_USERS";
 
+
 let initialState = {
   users: [],
-  sortedUsersByAlphabet: []
+  sortedUsersByAlphabet: [],
 };
 
 const employeesReducer = (state = initialState, action) => {
@@ -12,21 +13,22 @@ const employeesReducer = (state = initialState, action) => {
     case SET_ACTIVE_USER: {
       return {
         ...state,
-        users: state.users.map(u => {
-                    if(u.id === action.userId) {
-                        return {...u, radioValue: action.value}
-                    }
-                    return u
-                })
+        users:state.users.map(u => {
+          if(u.id === action.userId) {
+            return { ...u, radioValue: action.value };
+          }
+          return u
+      })
       };
     }
     case SET_USERS: {     
       return {
         ...state,
-        users: action.users 
+        users: action.users
       };
     }
     case SORT_USERS: {
+      state.sortedUsersByAlphabet = []
       const alpha = Array.from(Array(26)).map((e, i) => i + 65);
       const alphabet = alpha.map((x) => String.fromCharCode(x));
       alphabet.forEach((i) => {
@@ -34,7 +36,6 @@ const employeesReducer = (state = initialState, action) => {
         let obj = {};
         obj[letter] = [];
         state.users.forEach((element) => {
-          element.radioValue = 'false'
           if (letter === element.firstName[0]) {
             obj[letter].push(element)
           }

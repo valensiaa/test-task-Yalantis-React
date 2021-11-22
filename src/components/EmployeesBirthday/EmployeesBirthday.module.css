@@ -9,3 +9,7 @@
   margin-left: 15px;
   border-top: 1px solid rgb(255, 99, 0);
 }
+.listUsers {
+  font-weight: 600;
+  font-size: 18px;
+}

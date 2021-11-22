@@ -11,9 +11,22 @@ h3.activeUser {
 .userBlock {
   padding: 5px 0px;
 }
+body::-webkit-scrollbar, .employeesBlockData::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+.employeesBlockData::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);        /* color of the tracking area */
+}
+
+.employeesBlockData::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 99, 0);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
 .employeesBlockData {
+  max-height: 80vh;
   display: flex;
-  overflow-x: auto;
+  overflow: auto;
   white-space: nowrap;
   padding: 30px;
   margin-right: 15px;
@@ -21,7 +34,7 @@ h3.activeUser {
 }
 
 .employeesBlock {
-  max-width: 60%;
+  max-width: 60vw;
 }
 h1 {
   height: 70px;

@@ -1,9 +1,9 @@
 import styles from "./Employees.module.css";
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 
 const Employees = (props) => {
-console.log(props)
+
   useEffect(() => {
     const resultData = async () => {
       await axios
@@ -22,6 +22,8 @@ console.log(props)
     let booleanValue = event.target.value;
     let userId = event.target.name;
     props.setActiveUser(booleanValue, userId);
+    props.sortUsers();
+
   };
 
   return (
@@ -37,33 +39,30 @@ console.log(props)
               ) : (
                 elem[1].map((u) => (
                   <div key={u.id} className={styles.userBlock}>
-                    <h3 className = {u.radioValue === 'true' ? styles.activeUser : ''}>
+                    <h3
+                      className={u.radioValue === "true" ? styles.activeUser : ""}
+                    >
                       {u.firstName} {u.lastName}
                     </h3>
-                    <div
-                      className={styles.radioButtons}
-                    >
+                    <div className={styles.radioButtons}>
                       <div>
-                        <label>
-                          <input
-                            type="radio"
-                            value={false}
-                            name={u.id}
-                            onClick={onChangeValue}
-                            defaultChecked
-                          />
-                          not active
-                        </label>
+                        <input
+                          type="radio"
+                          value={'false'}
+                          name={u.id}
+                          onChange={onChangeValue}
+                          defaultChecked
+                        />
+                        not active
                       </div>
                       <div>
-                        <label>
-                          <input 
-                          type="radio" 
-                          value={true} 
+                        <input
+                          type="radio"
+                          value={'true'}
                           name={u.id}
-                          onClick={onChangeValue} />
-                          active
-                        </label>
+                          onChange={onChangeValue}
+                        />
+                        active
                       </div>
                     </div>
                   </div>
