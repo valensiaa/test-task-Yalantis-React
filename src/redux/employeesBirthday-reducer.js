@@ -2,7 +2,6 @@ const SET_ACTIVE_BIRTHDAY_USERS = 'SET_ACTIVE_BIRTHDAY_USERS'
 const SORT_ACTIVE_BIRTHDAY_USERS = 'SORT_ACTIVE_BIRTHDAY_USERS'
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October","November", "December"];
 
-
 let initialState = {
   activeUsersBirthday: [],
   sortedActiveUsersBirthday: []

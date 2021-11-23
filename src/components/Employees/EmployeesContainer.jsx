@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Employees from './Employees'
-import {setRadioActiveAC, setUsersAC, sortUsersAC} from '../../redux/employees-reducer'
+import {setRadioActiveAC, setUsersAC, sortUsersAC, setNotActiveUsersAC} from '../../redux/employees-reducer'
 
 let mapStateToProps = (state) => {   
    return {
@@ -19,6 +19,9 @@ let mapDispatchToProps = (dispatch) => {
       },
       sortUsers:() => {
          dispatch(sortUsersAC())
+      },
+      setNotActiveUser:() => {
+         dispatch(setNotActiveUsersAC())
       }
    }
 }

@@ -1,3 +1,4 @@
+const SET_NOT_ACTIVE_USER = 'SET_NOT_ACTIVE_USER'
 const SET_ACTIVE_USER = "SET_ACTIVE_USER";
 const SET_USERS = "SET_USERS";
 const SORT_USERS = "SORT_USERS";
@@ -5,11 +6,19 @@ const SORT_USERS = "SORT_USERS";
 
 let initialState = {
   users: [],
-  sortedUsersByAlphabet: [],
+  sortedUsersByAlphabet: []
 };
 
 const employeesReducer = (state = initialState, action) => {
   switch (action.type) {
+    case SET_NOT_ACTIVE_USER: {
+      return {
+        ...state,
+        users:state.users.map(u => {
+            return { ...u, radioValue: 'false' };
+      })
+      };
+    }
     case SET_ACTIVE_USER: {
       return {
         ...state,
@@ -24,7 +33,7 @@ const employeesReducer = (state = initialState, action) => {
     case SET_USERS: {     
       return {
         ...state,
-        users: action.users
+        users: action.users,
       };
     }
     case SORT_USERS: {
@@ -55,6 +64,7 @@ const employeesReducer = (state = initialState, action) => {
 
 export const setRadioActiveAC = (value, userId) => ({type: SET_ACTIVE_USER, value, userId});
 export const setUsersAC = (users) => ({ type: SET_USERS, users });
+export const setNotActiveUsersAC = () => ({ type: SET_NOT_ACTIVE_USER });
 export const sortUsersAC = (users) => ({ type: SORT_USERS, users });
 
 

@@ -2,10 +2,12 @@ import styles from "./EmployeesBirthday.module.css";
 import React, { useEffect } from "react";
 
 const EmployeesBirthday = (props) => {
+
+console.log(props)
   useEffect(() => {
     props.setActiveBirthdayUSers(props.users);
     props.sortActiveBirthdayUsers();
-  }, [props.users]);
+  },[props.users]);
 
   let setDobFormat = (value) => {
     let date = new Date(value);

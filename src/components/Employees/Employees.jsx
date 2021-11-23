@@ -4,18 +4,22 @@ import React, { useEffect} from "react";
 
 const Employees = (props) => {
 
-  useEffect(() => {
-    const resultData = async () => {
-      await axios
-        .get("https://yalantis-react-school-api.yalantis.com/api/task0/users")
-        .then((response) => {
-          props.setUsers(response.data);
-          props.sortUsers();
-        })
-        .catch((err) => console.error(`Error: ${err}`));
-    };
-    resultData();
-  }, []);
+    useEffect(() => {
+      const resultData = async () => {
+        await axios
+          .get("https://yalantis-react-school-api.yalantis.com/api/task0/users")
+          .then((response) => {
+            props.setUsers(response.data)
+            props.setNotActiveUser()
+            props.sortUsers()
+          })
+          .catch((err) => console.error(`Error: ${err}`));
+      };
+      if(props.users.length === 0) resultData(); 
+   
+    }, []);
+ 
+  
 
   let onChangeValue = (event) => {
     
@@ -32,8 +36,8 @@ const Employees = (props) => {
       <div className={styles.employeesBlockData}>
         {props.sortedUsersByAlphabet.map((p) =>
           Object.entries(p).map((elem) => (
-            <div className={styles.usersBlockByLetter} key={elem.id}>
-              <h2 key={elem.id}>{elem[0]}</h2>
+            <div className={styles.usersBlockByLetter}>
+              <h2>{elem[0]}</h2>
               {typeof elem[1] === "string" ? (
                 <h3>{elem[1]}</h3>
               ) : (
@@ -46,19 +50,20 @@ const Employees = (props) => {
                       <div>
                         <input
                           type="radio"
-                          value={'false'}
+                          value='false'
                           name={u.id}
                           onChange={onChangeValue}
-                          defaultChecked
+                         checked = {u.radioValue === "false"}
                         />
                         not active
                       </div>
                       <div>
                         <input
                           type="radio"
-                          value={'true'}
+                          value='true'
                           name={u.id}
-                          onChange={onChangeValue}
+                          onChange={onChangeValue}          
+                         checked = {u.radioValue === "true"}
                         />
                         active
                       </div>
