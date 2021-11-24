@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 
 const EmployeesBirthday = (props) => {
 
-console.log(props)
   useEffect(() => {
     props.setActiveBirthdayUSers(props.users);
     props.sortActiveBirthdayUsers();
