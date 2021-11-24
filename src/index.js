@@ -3,20 +3,20 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import store from "./redux/redux-store";
 import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <HashRouter>
       <Provider store={store}>
         <Routes>
           <Route path="/" element={<App />} />
           <Route exact path="/employees" element={<App />} />
         </Routes>
       </Provider>
-    </Router>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
