@@ -12,8 +12,8 @@ ReactDOM.render(
     <Router>
       <Provider store={store}>
         <Routes>
-            <Route path="/" element={<App />} />
-            <Route exact path="/employees" element={<App />} />
+          <Route path="/" element={<App />} />
+          <Route exact path="/employees" element={<App />} />
         </Routes>
       </Provider>
     </Router>

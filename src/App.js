@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import EmployeesContainer from "./components/Employees/EmployeesContainer";
-import EmployeesBirthdayContainer from "./components/EmployeesBirthday/EmployeesBirthdayContainer"
+import EmployeesBirthdayContainer from "./components/EmployeesBirthday/EmployeesBirthdayContainer";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -18,9 +18,9 @@ function App() {
   return (
     <div className="App">
       <EmployeesContainer />
-      <EmployeesBirthdayContainer/>
+      <EmployeesBirthdayContainer />
     </div>
-  )
+  );
 }
 
 export default App;

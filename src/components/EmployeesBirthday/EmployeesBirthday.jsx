@@ -2,14 +2,14 @@ import styles from "./EmployeesBirthday.module.css";
 import React, { useEffect } from "react";
 
 const EmployeesBirthday = (props) => {
-let users = props.users
+  let users = props.users;
   let sortActiveUsers = (u) => {
     props.setActiveBirthdayUSers(u);
     props.sortActiveBirthdayUsers();
-  }
+  };
 
   useEffect(() => {
-    sortActiveUsers(users)
+    sortActiveUsers(users);
   }, [users]);
 
   let setDobFormat = (value) => {
@@ -50,15 +50,15 @@ let users = props.users
                 {typeof elem[1] === "string" ? (
                   <p>{elem[1]}</p>
                 ) : (
-                 
-                    <ul key={elem.id}>
-                      {elem[1].sort((a, b) => (a.lastName).localeCompare(b.lastName)).map((u) => (
+                  <ul key={elem.id}>
+                    {elem[1]
+                      .sort((a, b) => a.lastName.localeCompare(b.lastName))
+                      .map((u) => (
                         <li key={u.id} className={styles.listUsers}>
                           {u.lastName} {u.firstName} - {setDobFormat(u.dob)}
                         </li>
                       ))}
-                    </ul>
-               
+                  </ul>
                 )}
               </div>
             ))

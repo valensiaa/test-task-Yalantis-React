@@ -1,24 +1,24 @@
-import { throttle } from 'lodash'
-import {combineReducers, createStore} from 'redux'
-import { loadState, saveState } from '../localStorage'
-import employeesReducer from './employees-reducer'
-import employeesBirthdayReducer from './employeesBirthday-reducer'
+import { throttle } from "lodash";
+import { combineReducers, createStore } from "redux";
+import { loadState, saveState } from "../localStorage";
+import employeesReducer from "./employees-reducer";
+import employeesBirthdayReducer from "./employeesBirthday-reducer";
 
-const persistedState = loadState()
+const persistedState = loadState();
 
 let reducers = combineReducers({
-   employeesPage: employeesReducer,
-   employeesBirthdayPage: employeesBirthdayReducer
-})
+  employeesPage: employeesReducer,
+  employeesBirthdayPage: employeesBirthdayReducer,
+});
 
+let store = createStore(reducers, persistedState);
 
-
-let store = createStore(reducers, persistedState)
-
-store.subscribe(throttle(() => {
-   saveState({
+store.subscribe(
+  throttle(() => {
+    saveState({
       employeesPage: store.getState().employeesPage,
-   })
-}, 1000))
+    });
+  }, 1000)
+);
 
- export default store
+export default store;
