@@ -1,8 +1,8 @@
 {
+  "homepage": "http://valensiaa.github.io/test-task-Yalantis-React",
   "name": "yalantis-test-task",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://valensiaa.github.io/test-task-Yalantis-React",
   "dependencies": {
     "@babel/core": "^7.13.0",
     "@testing-library/jest-dom": "^5.15.0",
