@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/Employees-birthdays-react-project/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/Employees-birthdays-react-project/static/js/main.a37c1f99.chunk.js",
-    "main.js.map": "/Employees-birthdays-react-project/static/js/main.a37c1f99.chunk.js.map",
-    "runtime-main.js": "/Employees-birthdays-react-project/static/js/runtime-main.8be3e3d4.js",
-    "runtime-main.js.map": "/Employees-birthdays-react-project/static/js/runtime-main.8be3e3d4.js.map",
-    "static/js/2.17183b8a.chunk.js": "/Employees-birthdays-react-project/static/js/2.17183b8a.chunk.js",
-    "static/js/2.17183b8a.chunk.js.map": "/Employees-birthdays-react-project/static/js/2.17183b8a.chunk.js.map",
-    "static/js/3.f442b96e.chunk.js": "/Employees-birthdays-react-project/static/js/3.f442b96e.chunk.js",
-    "static/js/3.f442b96e.chunk.js.map": "/Employees-birthdays-react-project/static/js/3.f442b96e.chunk.js.map",
-    "index.html": "/Employees-birthdays-react-project/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/Employees-birthdays-react-project/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.17183b8a.chunk.js.LICENSE.txt": "/Employees-birthdays-react-project/static/js/2.17183b8a.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/Employees-birthdays-react-project/static/media/logo.6ce24c58.svg"
+    "main.css": "/test-task-Yalantis-React/static/css/main.3a334412.chunk.css",
+    "main.js": "/test-task-Yalantis-React/static/js/main.2d27184b.chunk.js",
+    "main.js.map": "/test-task-Yalantis-React/static/js/main.2d27184b.chunk.js.map",
+    "runtime-main.js": "/test-task-Yalantis-React/static/js/runtime-main.45709644.js",
+    "runtime-main.js.map": "/test-task-Yalantis-React/static/js/runtime-main.45709644.js.map",
+    "static/js/2.e365b91b.chunk.js": "/test-task-Yalantis-React/static/js/2.e365b91b.chunk.js",
+    "static/js/2.e365b91b.chunk.js.map": "/test-task-Yalantis-React/static/js/2.e365b91b.chunk.js.map",
+    "static/js/3.f449be69.chunk.js": "/test-task-Yalantis-React/static/js/3.f449be69.chunk.js",
+    "static/js/3.f449be69.chunk.js.map": "/test-task-Yalantis-React/static/js/3.f449be69.chunk.js.map",
+    "index.html": "/test-task-Yalantis-React/index.html",
+    "static/css/main.3a334412.chunk.css.map": "/test-task-Yalantis-React/static/css/main.3a334412.chunk.css.map",
+    "static/js/2.e365b91b.chunk.js.LICENSE.txt": "/test-task-Yalantis-React/static/js/2.e365b91b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8be3e3d4.js",
-    "static/js/2.17183b8a.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.a37c1f99.chunk.js"
+    "static/js/runtime-main.45709644.js",
+    "static/js/2.e365b91b.chunk.js",
+    "static/css/main.3a334412.chunk.css",
+    "static/js/main.2d27184b.chunk.js"
   ]
 }
