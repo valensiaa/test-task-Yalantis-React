@@ -39,7 +39,6 @@ const Employees = (props) => {
                 elem[1].map((u) => (
                   <div key={u.id} className={styles.userBlock}>
                     <h3
-                      key={u.id}
                       className={
                         u.radioValue === "true" ? styles.activeUser : ""
                       }
