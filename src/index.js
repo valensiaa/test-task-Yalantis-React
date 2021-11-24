@@ -12,8 +12,8 @@ ReactDOM.render(
     <HashRouter>
       <Provider store={store}>
         <Routes>
-          <Route path="https://valensiaa.github.io/test-task-Yalantis-React.js//" element={<App />} />
-          <Route exact path="https://valensiaa.github.io/test-task-Yalantis-React.js//employees" element={<App />} />
+          <Route path="/" element={<App />} />
+          <Route exact path="/employees" element={<App />} />
         </Routes>
       </Provider>
     </HashRouter>
