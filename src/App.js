@@ -10,7 +10,7 @@ function App() {
 
   let navigate = useNavigate();
   useEffect(() => {
-    navigate("/employees");
+    navigate( '/employees');
     if (loaded) return;
     setLoaded(true);
   }, [loaded, navigate]);

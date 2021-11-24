@@ -9,11 +9,11 @@ import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Provider store={store}>
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route exact path="/employees" element={<App />} />
+          <Route path={process.env.PUBLIC_URL + '/'} element={<App />} />
+          <Route exact path={process.env.PUBLIC_URL + '/employees'} element={<App />} />
         </Routes>
       </Provider>
     </BrowserRouter>
