@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/valensiaa/test-task-Yalantis-React.js.git/static/css/main.a9a77282.chunk.css",
-    "main.js": "/valensiaa/test-task-Yalantis-React.js.git/static/js/main.2cd51f7a.chunk.js",
-    "main.js.map": "/valensiaa/test-task-Yalantis-React.js.git/static/js/main.2cd51f7a.chunk.js.map",
-    "runtime-main.js": "/valensiaa/test-task-Yalantis-React.js.git/static/js/runtime-main.bf0d5728.js",
-    "runtime-main.js.map": "/valensiaa/test-task-Yalantis-React.js.git/static/js/runtime-main.bf0d5728.js.map",
-    "static/js/2.072de604.chunk.js": "/valensiaa/test-task-Yalantis-React.js.git/static/js/2.072de604.chunk.js",
-    "static/js/2.072de604.chunk.js.map": "/valensiaa/test-task-Yalantis-React.js.git/static/js/2.072de604.chunk.js.map",
-    "static/js/3.f449be69.chunk.js": "/valensiaa/test-task-Yalantis-React.js.git/static/js/3.f449be69.chunk.js",
-    "static/js/3.f449be69.chunk.js.map": "/valensiaa/test-task-Yalantis-React.js.git/static/js/3.f449be69.chunk.js.map",
-    "index.html": "/valensiaa/test-task-Yalantis-React.js.git/index.html",
-    "static/css/main.a9a77282.chunk.css.map": "/valensiaa/test-task-Yalantis-React.js.git/static/css/main.a9a77282.chunk.css.map",
-    "static/js/2.072de604.chunk.js.LICENSE.txt": "/valensiaa/test-task-Yalantis-React.js.git/static/js/2.072de604.chunk.js.LICENSE.txt"
+    "main.css": "/test-task-Yalantis-React.js.git/static/css/main.a9a77282.chunk.css",
+    "main.js": "/test-task-Yalantis-React.js.git/static/js/main.2cd51f7a.chunk.js",
+    "main.js.map": "/test-task-Yalantis-React.js.git/static/js/main.2cd51f7a.chunk.js.map",
+    "runtime-main.js": "/test-task-Yalantis-React.js.git/static/js/runtime-main.aa25e1de.js",
+    "runtime-main.js.map": "/test-task-Yalantis-React.js.git/static/js/runtime-main.aa25e1de.js.map",
+    "static/js/2.072de604.chunk.js": "/test-task-Yalantis-React.js.git/static/js/2.072de604.chunk.js",
+    "static/js/2.072de604.chunk.js.map": "/test-task-Yalantis-React.js.git/static/js/2.072de604.chunk.js.map",
+    "static/js/3.f449be69.chunk.js": "/test-task-Yalantis-React.js.git/static/js/3.f449be69.chunk.js",
+    "static/js/3.f449be69.chunk.js.map": "/test-task-Yalantis-React.js.git/static/js/3.f449be69.chunk.js.map",
+    "index.html": "/test-task-Yalantis-React.js.git/index.html",
+    "static/css/main.a9a77282.chunk.css.map": "/test-task-Yalantis-React.js.git/static/css/main.a9a77282.chunk.css.map",
+    "static/js/2.072de604.chunk.js.LICENSE.txt": "/test-task-Yalantis-React.js.git/static/js/2.072de604.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bf0d5728.js",
+    "static/js/runtime-main.aa25e1de.js",
     "static/js/2.072de604.chunk.js",
     "static/css/main.a9a77282.chunk.css",
     "static/js/main.2cd51f7a.chunk.js"
